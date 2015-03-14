@@ -26,6 +26,8 @@ class User extends ActiveRecord implements IdentityInterface
     const STATUS_DELETED = 0;
     const STATUS_ACTIVE = 10;
 
+    const ROLE_USER = 10;
+
     /**
      * @inheritdoc
      */
@@ -50,8 +52,16 @@ class User extends ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
+            [['username', 'email',], 'required'],
+            [['username', 'email'], 'string', 'max' => 255],
+            [['username'], 'unique'],
+            [['username'], 'match' , 'pattern'=>'/^[a-z]\w*$/i'],
+            [['email'], 'unique'],
+            [['email'], 'email'],
             ['status', 'default', 'value' => self::STATUS_ACTIVE],
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
+            ['role', 'default', 'value' => self::ROLE_USER],
+            ['role', 'in', 'range' => [self::ROLE_USER]],
         ];
     }
 
@@ -113,7 +123,7 @@ class User extends ActiveRecord implements IdentityInterface
         }
         $expire = Yii::$app->params['user.passwordResetTokenExpire'];
         $parts = explode('_', $token);
-        $timestamp = (int) end($parts);
+        $timestamp = (int)end($parts);
         return $timestamp + $expire >= time();
     }
 
