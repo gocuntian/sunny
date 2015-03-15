@@ -29,6 +29,21 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+
+        /*'urlManager' => [
+           'enablePrettyUrl' => true,
+           'enableStrictParsing' => true,
+           'showScriptName' => false,
+           'rules' => [
+               [
+                   '<controller:(section|comment|user)>/<action:(create|test|account|info|info1|old|old001|download)>' => '<controller>/<action>',
+                   '<controller:(section|comment|user)>/<id:\w+>/<action:(update|delete|account)>' => '<controller>/<action>',
+                   '<controller:(section|comment|user)>/<id:\w+>' => '<controller>/view',
+                   '<controller:(section|comment|user)>' => '<controller>/index',
+
+               ],
+           ],
+       ],*/
     ],
     'params' => $params,
 ];
