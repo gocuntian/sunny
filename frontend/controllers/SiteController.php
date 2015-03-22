@@ -18,6 +18,9 @@ use yii\filters\AccessControl;
  */
 class SiteController extends Controller
 {
+
+
+
     /**
      * @inheritdoc
      */
@@ -63,6 +66,17 @@ class SiteController extends Controller
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
         ];
+    }
+
+    /**
+     * frontend Home Page
+     * @return string
+     */
+    public function actionHomepage()
+    {
+        echo 'hello <br/>';
+        echo $this->layout = '/mainNew.php';
+        return $this->render('index');
     }
 
     public function actionIndex()
