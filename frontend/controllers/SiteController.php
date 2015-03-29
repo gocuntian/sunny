@@ -72,11 +72,13 @@ class SiteController extends Controller
      * frontend Home Page
      * @return string
      */
-    public function actionHomepage()
-    {
-        echo 'hello <br/>';
-        echo $this->layout = '/mainNew.php';
+    public function actionNew(){
+        $this->layout = '/new.php';
         return $this->render('index');
+    }
+
+    public function actionTest(){
+        echo 'hello world !! test success !!';
     }
 
     public function actionIndex()

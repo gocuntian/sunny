@@ -19,6 +19,10 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a(Yii::t('frontend/section', 'Create Section'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
+    <div style="background-color: #0000cc;height: 50px;width: 100px">
+        kdkd
+    </div>
+
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
