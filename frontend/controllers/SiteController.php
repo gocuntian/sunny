@@ -82,7 +82,7 @@ class SiteController extends Controller
     }
 
     public function actionLeft(){
-        $this->layout = '/new.php';
+        $this->layout = '/left.php';
         return $this->render('index');
     }
 

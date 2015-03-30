@@ -91,7 +91,8 @@ AppAsset::register($this);
                     built on HTML5 and CSS3 by HTML5 UP</h2>
 
                 <p>Does this statement make you want to click the big shiny button?</p>
-                <a href="#" class="button big icon fa-check-circle">开始学习</a>
+                <!-- commit button -->
+                <?php echo \yii\helpers\Html::a('start', '?r=site/left', ['class' => 'button big icon fa-check-circle']) ?>
             </div>
 
         </div>
