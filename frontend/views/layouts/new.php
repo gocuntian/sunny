@@ -42,7 +42,6 @@
 					<ul>
 						<li class="current_page_item">
 							<?php echo \yii\helpers\Html::a('Home','?r=site/test','') ?>
-
 						</li>
 						<li>
 							<a href="">Dropdown</a>
