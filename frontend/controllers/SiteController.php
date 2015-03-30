@@ -74,11 +74,16 @@ class SiteController extends Controller
      */
     public function actionNew(){
         $this->layout = '/new.php';
-        return $this->render('index');
+        return $this->render('new');
     }
 
     public function actionTest(){
         echo 'hello world !! test success !!';
+    }
+
+    public function actionLeft(){
+        $this->layout = '/new.php';
+        return $this->render('index');
     }
 
     public function actionIndex()
