@@ -15,7 +15,7 @@ AppAsset::register($this);
     <!DOCTYPE HTML>
     <html>
     <head>
-        <title>ZeroFour by HTML5 UP</title>
+        <title>Sunny Project</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
         <meta name="description" content=""/>
         <meta name="keywords" content=""/>
@@ -74,7 +74,7 @@ AppAsset::register($this);
                             </li>
                             <li>
                                 <!--<a href="left-sidebar.html">Left Sidebar</a>-->
-                                <?php echo \yii\helpers\Html::a('Home', '?r=site/left', '') ?>
+                                <?php echo \yii\helpers\Html::a('Left Sidebar', '?r=site/left', '') ?>
                             </li>
                             <li><a href="right-sidebar.html">Right Sidebar</a></li>
                             <li><a href="no-sidebar.html">No Sidebar</a></li>

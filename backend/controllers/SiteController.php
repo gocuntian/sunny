@@ -26,7 +26,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index'],
+                        'actions' => ['logout', 'index','admin'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -76,6 +76,12 @@ class SiteController extends Controller
                 'model' => $model,
             ]);
         }
+    }
+
+    public function actionAdmin(){
+//        echo 'ssss';
+        $this->layout = '/admin.php';
+        return $this->render('index');
     }
 
     public function actionLogout()
