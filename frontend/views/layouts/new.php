@@ -92,7 +92,7 @@ AppAsset::register($this);
 
                 <p>Does this statement make you want to click the big shiny button?</p>
                 <!-- commit button -->
-                <?php echo \yii\helpers\Html::a('start', '?r=site/left', ['class' => 'button big icon fa-check-circle']) ?>
+                <?php echo \yii\helpers\Html::a('登陆', '?r=site/left', ['class' => 'button big icon fa-check-circle']) ?>
             </div>
 
         </div>
