@@ -83,7 +83,7 @@ class SiteController extends Controller
 
     public function actionLeft(){
         $this->layout = '/left.php';
-        return $this->render('index');
+        return $this->render('login');
     }
 
     public function actionIndex()
@@ -93,6 +93,7 @@ class SiteController extends Controller
 
     public function actionLogin()
     {
+        $this->layout = '/left.php';
         if (!\Yii::$app->user->isGuest) {
             return $this->goHome();
         }
