@@ -1,15 +1,31 @@
-<!DOCTYPE HTML>
-<!--
-	ZeroFour by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<?php
+use yii\helpers\Html;
+use yii\bootstrap\Nav;
+use yii\bootstrap\NavBar;
+use yii\widgets\Breadcrumbs;
+use frontend\assets\AppAsset;
+use frontend\widgets\Alert;
+
+/* @var $this \yii\web\View */
+/* @var $content string */
+
+AppAsset::register($this);
+?>
+<?php $this->beginPage() ?>
+<!DOCTYPE html>
+<html lang="<?= Yii::$app->language ?>">
 <head>
-    <title>Left Sidebar - ZeroFour by HTML5 UP</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta charset="<?= Yii::$app->charset ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?= Html::csrfMetaTags() ?>
+    <title><?= Html::encode($this->title) ?></title>
+    <?php $this->head() ?>
+
+
+
+   <!-- <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <meta name="keywords" content="" />-->
     <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.dropotron.min.js"></script>
@@ -24,8 +40,11 @@
     <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 </head>
-<body class="left-sidebar">
 
+
+
+<body class="left-sidebar">
+<?php $this->beginBody() ?>
 <!-- Header Wrapper -->
 <div id="header-wrapper">
     <div class="container">
@@ -83,35 +102,15 @@
 
                             <section>
                                 <header class="major">
-                                    <h2>Subheading</h2>
+                                    <h2>登陆网站</h2>
                                 </header>
                                 <p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
                                     Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
                                     Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
                                     consequat etiam.</p>
-                                <footer>
+                                <!--<footer>
                                     <a href="#" class="button icon fa-info-circle">Find out more</a>
-                                </footer>
-                            </section>
-
-                            <section>
-                                <header class="major">
-                                    <h2>Subheading</h2>
-                                </header>
-                                <ul class="style2">
-                                    <li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-                                    <li><a href="#">Ornare in hendrerit in lectus</a></li>
-                                    <li><a href="#">Semper mod quis eget mi dolore</a></li>
-                                    <li><a href="#">Quam turpis feugiat sit dolor</a></li>
-                                    <li><a href="#">Amet ornare in hendrerit in lectus</a></li>
-                                    <li><a href="#">Semper mod quisturpis nisi</a></li>
-                                    <li><a href="#">Consequat etiam lorem phasellus</a></li>
-                                    <li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-                                    <li><a href="#">Semper mod quisturpis nisi</a></li>
-                                </ul>
-                                <footer>
-                                    <a href="#" class="button icon fa-arrow-circle-o-right">Do Something</a>
-                                </footer>
+                                </footer>-->
                             </section>
 
                         </div>
@@ -120,16 +119,17 @@
                         <div id="content">
 
                             <!-- Content -->
+                            <?= $content ?>
+                            <!--<article>-->
+                               <!-- <header class="major">
+                                    <h2>you can login here</h2>
+                                    <p>after logged you can save your process</p>
+                                </header>-->
 
-                            <article>
-                                <header class="major">
-                                    <h2>Left Sidebar</h2>
-                                    <p>Which means the sidebar is on the left</p>
-                                </header>
+                                <!--<span class="image featured"><img src="images/pic08.jpg" alt="" /></span>-->
 
-                                <span class="image featured"><img src="images/pic08.jpg" alt="" /></span>
 
-                                <p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
+                              <!--  <p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
                                     Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
                                     Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
                                     consequat etiam lorem ipsum dolor sit amet nullam.</p>
@@ -149,92 +149,10 @@
                                     Suspendisse laoreet metus ut metus imperdiet interdum aliquam justo tincidunt. Mauris dolor urna,
                                     fringilla vel malesuada ac, dignissim eu mi. Praesent mollis massa ac nulla pretium pretium.
                                     Maecenas tortor mauris, consectetur pellentesque dapibus eget, tincidunt vitae arcu.
-                                    Vestibulum purus augue, tincidunt sit amet iaculis id, porta eu purus.</p>
-                            </article>
+                                    Vestibulum purus augue, tincidunt sit amet iaculis id, porta eu purus.</p>-->
+                            <!--</article>-->
 
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="wrapper style3">
-        <div class="inner">
-            <div class="container">
-                <div class="row">
-                    <div class="8u">
-
-                        <!-- Article list -->
-                        <section class="box article-list">
-                            <h2 class="icon fa-file-text-o">Recent Posts</h2>
-
-                            <!-- Excerpt -->
-                            <article class="box excerpt">
-                                <a href="#" class="image left"><img src="images/pic04.jpg" alt="" /></a>
-                                <div>
-                                    <header>
-                                        <span class="date">July 24</span>
-                                        <h3><a href="#">Repairing a hyperspace window</a></h3>
-                                    </header>
-                                    <p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus
-                                        semper mod quisturpis nisi consequat etiam lorem. Phasellus quam turpis,
-                                        feugiat et sit amet ornare in, hendrerit in lectus semper mod quis eget mi dolore.</p>
-                                </div>
-                            </article>
-
-                            <!-- Excerpt -->
-                            <article class="box excerpt">
-                                <a href="#" class="image left"><img src="images/pic05.jpg" alt="" /></a>
-                                <div>
-                                    <header>
-                                        <span class="date">July 18</span>
-                                        <h3><a href="#">Adventuring with a knee injury</a></h3>
-                                    </header>
-                                    <p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus
-                                        semper mod quisturpis nisi consequat etiam lorem. Phasellus quam turpis,
-                                        feugiat et sit amet ornare in, hendrerit in lectus semper mod quis eget mi dolore.</p>
-                                </div>
-                            </article>
-
-                            <!-- Excerpt -->
-                            <article class="box excerpt">
-                                <a href="#" class="image left"><img src="images/pic06.jpg" alt="" /></a>
-                                <div>
-                                    <header>
-                                        <span class="date">July 14</span>
-                                        <h3><a href="#">Preparing for Y2K38</a></h3>
-                                    </header>
-                                    <p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus
-                                        semper mod quisturpis nisi consequat etiam lorem. Phasellus quam turpis,
-                                        feugiat et sit amet ornare in, hendrerit in lectus semper mod quis eget mi dolore.</p>
-                                </div>
-                            </article>
-
-                        </section>
-                    </div>
-                    <div class="4u">
-
-                        <!-- Spotlight -->
-                        <section class="box spotlight">
-                            <h2 class="icon fa-file-text-o">Spotlight</h2>
-                            <article>
-                                <a href="#" class="image featured"><img src="images/pic07.jpg" alt=""></a>
-                                <header>
-                                    <h3><a href="#">Neural Implants</a></h3>
-                                    <p>The pros and cons. Mostly cons.</p>
-                                </header>
-                                <p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus semper mod
-                                    quisturpis nisi consequat ornare in, hendrerit in lectus semper mod quis eget mi quat etiam
-                                    lorem. Phasellus quam turpis, feugiat sed et lorem ipsum dolor consequat dolor feugiat sed
-                                    et tempus consequat etiam.</p>
-                                <p>Lorem ipsum dolor quam turpis, feugiat sit amet ornare in, hendrerit in lectus semper
-                                    mod quisturpis nisi consequat etiam lorem sed amet quam turpis.</p>
-                                <footer>
-                                    <a href="#" class="button alt icon fa-file-o">Continue Reading</a>
-                                </footer>
-                            </article>
-                        </section>
-
                     </div>
                 </div>
             </div>
@@ -351,6 +269,7 @@
         </div>
     </footer>
 </div>
-
+<?php $this->endBody() ?>
 </body>
 </html>
+<?php $this->endPage() ?>
