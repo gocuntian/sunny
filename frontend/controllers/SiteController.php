@@ -3,6 +3,7 @@ namespace frontend\controllers;
 
 use Yii;
 use common\models\LoginForm;
+use common\models\EditorForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
@@ -18,7 +19,6 @@ use yii\filters\AccessControl;
  */
 class SiteController extends Controller
 {
-
 
 
     /**
@@ -68,20 +68,47 @@ class SiteController extends Controller
         ];
     }
 
+    public function actionEditor()
+    {
+        $model = new EditorForm();
+        return $this->render('editor', [
+            'model' => $model,
+        ]);
+    }
+
+    public function actionSignup()
+    {
+        $model = new SignupForm();
+        if ($model->load(Yii::$app->request->post())) {
+            if ($user = $model->signup()) {
+                if (Yii::$app->getUser()->login($user)) {
+                    return $this->goHome();
+                }
+            }
+        }
+
+        return $this->render('signup', [
+            'model' => $model,
+        ]);
+    }
+
     /**
      * frontend Home Page
      * @return string
      */
-    public function actionNew(){
+    public function actionNew()
+    {
         $this->layout = '/new.php';
         return $this->render('new');
     }
 
-    public function actionTest(){
+    public function actionTest()
+    {
         echo 'hello world !! test success !!';
     }
 
-    public function actionLeft(){
+    public function actionLeft()
+    {
         $this->layout = '/left.php';
         return $this->render('login');
     }
@@ -89,6 +116,17 @@ class SiteController extends Controller
     public function actionIndex()
     {
         return $this->render('index');
+    }
+
+    public function actionMail()
+    {
+        Yii::$app->mailer->compose()
+            ->setFrom('zhuwj2012@163.com')
+            ->setTo('mianbao726@163.com')
+            ->setSubject('Message subject')
+            ->setTextBody('Plain text content')
+            ->setHtmlBody('<b>HTML content</b>')
+            ->send();
     }
 
     public function actionLogin()
@@ -138,22 +176,6 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
-    }
-
-    public function actionSignup()
-    {
-        $model = new SignupForm();
-        if ($model->load(Yii::$app->request->post())) {
-            if ($user = $model->signup()) {
-                if (Yii::$app->getUser()->login($user)) {
-                    return $this->goHome();
-                }
-            }
-        }
-
-        return $this->render('signup', [
-            'model' => $model,
-        ]);
     }
 
     public function actionRequestPasswordReset()

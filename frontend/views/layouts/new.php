@@ -77,7 +77,7 @@ AppAsset::register($this);
                                 <?php echo \yii\helpers\Html::a('Left Sidebar', '?r=site/left', '') ?>
                             </li>
                             <li><a href="right-sidebar.html">Right Sidebar</a></li>
-                            <li><a href="no-sidebar.html">No Sidebar</a></li>
+                            <li><?php echo \yii\helpers\Html::a('Editor', '?r=site/editor', '') ?></li>
                         </ul>
                     </nav>
 
@@ -91,6 +91,8 @@ AppAsset::register($this);
                     built on HTML5 and CSS3 by HTML5 UP</h2>
 
                 <p>Does this statement make you want to click the big shiny button?</p>
+
+                <?php echo \yii\helpers\Html::a('mail', '?r=site/mail', ['class' => 'a']) ?>
                 <!-- commit button -->
                 <?php echo \yii\helpers\Html::a('登陆', '?r=site/login', ['class' => 'button big icon fa-check-circle']) ?>
             </div>
