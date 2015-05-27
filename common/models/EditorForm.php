@@ -9,7 +9,10 @@ use yii\base\Model;
  */
 class EditorForm extends Model
 {
+    public $title;
+    public $key;
     public $context;
+
 //    public $username;
 //    public $password;
 //    public $rememberMe = true;

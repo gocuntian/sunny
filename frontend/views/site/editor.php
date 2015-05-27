@@ -15,6 +15,7 @@ use yii\bootstrap\ActiveForm;
 ?>
 <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
 
+<?= $form->field($model, 'title') ?>
 <?= $form->field($model, 'context')->widget(CKEditor::className(), [
     'options' => ['rows' => 6],
     'preset' => 'full',
