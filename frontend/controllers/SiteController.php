@@ -115,7 +115,9 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        return $this->render('index');
+        $this->layout = '/new.php';
+//        return $this->render('index');
+        return $this->render('new');
     }
 
     public function actionMail()

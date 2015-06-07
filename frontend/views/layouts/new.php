@@ -53,31 +53,30 @@ AppAsset::register($this);
                     <nav id="nav">
                         <ul>
                             <li class="current_page_item">
-                                <?php echo \yii\helpers\Html::a('Home', '?r=site/new', '') ?>
+                                <?php echo \yii\helpers\Html::a('首页', '?r=site/new', '') ?>
                             </li>
                             <li>
-                                <a href="">Dropdown</a>
+                                <a href="">我要学</a>
                                 <ul>
-                                    <li><a href="#">Lorem ipsum dolor</a></li>
-                                    <li><a href="#">Magna phasellus</a></li>
+                                    <li><a href="#">Linux操作系统</a></li>
+                                    <li><a href="#">写一个操作系统</a></li>
                                     <li>
-                                        <a href="">Phasellus consequat</a>
+                                        <a href="">C语言的深处</a>
                                         <ul>
-                                            <li><a href="#">Lorem ipsum dolor</a></li>
-                                            <li><a href="#">Phasellus consequat</a></li>
-                                            <li><a href="#">Magna phasellus</a></li>
-                                            <li><a href="#">Etiam dolore nisl</a></li>
+                                            <li><a href="#">简介</a></li>
+                                            <li><a href="#">框架</a></li>
                                         </ul>
-                                    </li>
-                                    <li><a href="#">Veroeros feugiat</a></li>
                                 </ul>
+
                             </li>
-                            <li>
-                                <!--<a href="left-sidebar.html">Left Sidebar</a>-->
-                                <?php echo \yii\helpers\Html::a('Left Sidebar', '?r=site/left', '') ?>
-                            </li>
-                            <li><a href="right-sidebar.html">Right Sidebar</a></li>
-                            <li><?php echo \yii\helpers\Html::a('Editor', '?r=site/editor', '') ?></li>
+                          <!--  <li>
+                                <!--<a href="left-sidebar.html">Left Sidebar</a>
+                                <?php /*echo \yii\helpers\Html::a('Left Sidebar', '?r=site/left', '') */?>
+                            </li>-->
+                            <li><a href="right-sidebar.html">申请发布教程</a></li>
+                            <li><?php echo \yii\helpers\Html::a('关于我们', '?r=site/editor', '') ?></li>
+                            <li><a href="right-sidebar.html">联系我们</a></li>
+                            <li><a href="right-sidebar.html">赞助我们</a></li>
                         </ul>
                     </nav>
 
@@ -86,15 +85,15 @@ AppAsset::register($this);
 
             <!-- Banner -->
             <div id="banner">
-                <h2><strong>ZeroFour:</strong> A free responsive site template
+                <h2><strong></strong> 现在开始
                     <br/>
-                    built on HTML5 and CSS3 by HTML5 UP</h2>
+                    写一个你自己的操作系统</h2>
 
-                <p>Does this statement make you want to click the big shiny button?</p>
+                <p>不知道从哪开始着手？</p>
 
-                <?php echo \yii\helpers\Html::a('mail', '?r=site/mail', ['class' => 'a']) ?>
                 <!-- commit button -->
-                <?php echo \yii\helpers\Html::a('登陆', '?r=site/login', ['class' => 'button big icon fa-check-circle']) ?>
+                <?php /*echo \yii\helpers\Html::a('login', '?r=site/login', ['class' => 'button big icon fa-check-circle']) */?>
+                <?php echo \yii\helpers\Html::a('开始学习', '?r=course', ['class' => 'button big icon fa-check-circle']) ?>
             </div>
 
         </div>
