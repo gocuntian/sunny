@@ -78,20 +78,6 @@ AppAsset::register($this);
 
                 </div>
             </header>
-
-            <!-- Banner -->
-            <div id="banner">
-                <h2><strong></strong> 现在开始
-                    <br/>
-                    写一个你自己的操作系统</h2>
-
-                <p>不知道从哪开始着手？</p>
-
-                <!-- commit button -->
-                <?php /*echo \yii\helpers\Html::a('login', '?r=site/login', ['class' => 'button big icon fa-check-circle']) */?>
-                <?php echo \yii\helpers\Html::a('开始学习', '?r=course&root=1', ['class' => 'button big icon fa-check-circle']) ?>
-            </div>
-
         </div>
     </div>
 

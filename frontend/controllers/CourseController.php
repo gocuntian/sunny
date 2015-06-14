@@ -30,43 +30,136 @@ class CourseController extends Controller
      * Lists all TblProduct models.
      * @return mixed
      */
-    public function actionIndex()
+    public function actionIndex($root)
     {
 
-// return a set of rows. each row is an associative array of column names and values.
-// an empty array is returned if no results
-        $posts = Yii::$app->db->createCommand('select id,root,lvl from tbl_product order by lvl,lft')
+        $posts = Yii::$app->db->createCommand('select id,lvl,case when lvl = 0 then 0 else root end as root,name from tbl_product where root = '.$root.'  order by lft')
             ->queryAll();
 
-        foreach ($posts as $value) {
-            foreach ($value as $k => $v) {
-                echo ' ------  ' . $k . ' : ' . $v;
-            }
-            echo '<br>';
-        }
 
+        $content = Yii::$app->db->createCommand('select name,content from tbl_product where root = '.$root.' and lvl =0 order by lft')
+            ->queryAll();
+
+        $count = 0;
+        $arr = array();
+        $arr_new = array();
+        foreach ($posts as $value) {
+            $arr[$value['lvl']] = $value['id'];
+            $arr_new[$count] = $value;
+            if ($count != 0) {
+                $arr_new[$count]['parent_id'] = $arr[$value['lvl'] - 1];
+            }else{
+                $arr_new[$count]['parent_id'] = '0';
+            }
+            $count++;
+        }
+        $arr_new = $this->tree($arr_new, $p_id = '0');
         $this->layout = '/index.php';
-//
-//        $searchModel = new TblProductSearch();
-//        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-//
         return $this->render('index', [
-            'model' => $posts
+            'model' => $arr_new, 'content' => array(array('content' => $content[0]['content'],'name' => $content[0]['name'])),
+            'current_id'=>-1,
+            'parent_id'=>-1,
         ]);
     }
+
+    function tree($arr, $p_id = '0')
+    {
+        $tree = array();
+        foreach ($arr as $row) {
+            if ($row['parent_id'] == $p_id) {
+                $tmp = $this->tree($arr, $row['id']);
+                if ($tmp) {
+                    $row['children'] = $tmp;
+                }
+                $tree[] = $row;
+            }
+        }
+        return $tree;
+    }
+
+    public function actionView($id)
+    {
+
+        $posts = Yii::$app->db->createCommand('select id,lvl,name,case when lvl = 0 then 0 else root end as root,name from tbl_product where root = 1  order by lft')
+            ->queryAll();
+
+        $content = Yii::$app->db->createCommand('select name,content from tbl_product where id = '.$id.'  order by lft')
+            ->queryAll();
+
+//        print_r($content);
+
+        $count = 0;
+        $arr = array();
+        $arr_new = array();
+
+        $parent_id = -1;
+        foreach ($posts as $value) {
+            $arr[$value['lvl']] = $value['id'];
+            $arr_new[$count] = $value;
+            if ($count != 0) {
+                $arr_new[$count]['parent_id'] = $arr[$value['lvl'] - 1];
+            }else{
+                $arr_new[$count]['parent_id'] = '0';
+            }
+
+            if($value['id'] == $id){
+                $parent_id =$arr[$value['lvl'] - 1];
+            }
+            $count++;
+        }
+        $arr_new = $this->tree($arr_new, $p_id = '0');
+        $this->layout = '/index.php';
+        return $this->render('index', [
+            'model' => $arr_new,
+            'content' => array(array('content' => $content[0]['content'],'name' => $content[0]['name'])),
+            'current_id'=>$id,
+            'parent_id'=>$parent_id,
+        ]);
+    }
+
+
+//    public function actionViewBackUp($id)
+//    {
+//        $this->layout = '/index.php';
+//
+//        $posts = Yii::$app->db->createCommand('select content from tbl_product where id = ' . $id)
+////        $posts = Yii::$app->db->createCommand('select content from tbl_product where id = 1')
+//            ->queryAll();
+//
+//
+//        $posts1 = Yii::$app->db->createCommand('select id,lvl,case when lvl = 0 then 0 else root end as root,name from tbl_product order by lvl,lft')
+//            ->queryAll();
+//
+////        print_r($posts);
+//
+//        function tree($arr, $p_id = '0')
+//        {
+//            $tree = array();
+//            foreach ($arr as $row) {
+//                if ($row['root'] == $p_id) {
+//                    $tmp = tree($arr, $row['id']);
+//                    if ($tmp) {
+//                        $row['children'] = $tmp;
+//                    }
+//                    $tree[] = $row;
+//                }
+//            }
+//            return $tree;
+//        }
+//
+//        $arr1 = tree($posts1, 0);
+//
+//        return $this->render('index', [
+//            'content' => $posts, 'model' => $arr1,
+//        ]);
+//
+//    }
 
     /**
      * Displays a single TblProduct model.
      * @param integer $id
      * @return mixed
      */
-    public function actionView($id)
-    {
-
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
-    }
 
     /**
      * Creates a new TblProduct model.
