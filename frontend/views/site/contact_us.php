@@ -25,13 +25,36 @@
 
                         <!-- Content -->
 
-                        <article>
-                           <!-- <header class="major">
-                                <h2>联系我们</h2>
-                            </header>-->
-
-                        </article>
-                        zhuwj726@gmail.com
+                        <section>
+                            <div>
+                                <div class="row">
+                                    <div class="6u">
+                                        <dl class="contact">
+                                            <dt>Twitter</dt>
+                                            <dd>@untitled-corp</dd>
+                                            <dt>Facebook</dt>
+                                            <dd>facebook.com/untitled</dd>
+                                            <dt>WWW</dt>
+                                            <dd>untitled.tld</dd>
+                                            <dt>Email</dt>
+                                            <dd>user@untitled.tld</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="6u">
+                                        <dl class="contact">
+                                            <dt>Address</dt>
+                                            <dd>
+                                                1234 Fictional Rd<br/>
+                                                Nashville, TN 00000-0000<br/>
+                                                USA
+                                            </dd>
+                                            <dt>Phone</dt>
+                                            <dd>(000) 000-0000</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </div>

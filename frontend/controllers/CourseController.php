@@ -33,11 +33,11 @@ class CourseController extends Controller
     public function actionIndex($root)
     {
 
-        $posts = Yii::$app->db->createCommand('select id,lvl,case when lvl = 0 then 0 else root end as root,name from tbl_product where root = '.$root.'  order by lft')
+        $posts = Yii::$app->db->createCommand('select id,lvl,case when lvl = 0 then 0 else root end as root,name from tbl_product where root = '.$root.'  and status = 0  order by lft')
             ->queryAll();
 
 
-        $content = Yii::$app->db->createCommand('select name,content from tbl_product where root = '.$root.' and lvl =0 order by lft')
+        $content = Yii::$app->db->createCommand('select name,content from tbl_product where root = '.$root.'  and status = 0  and lvl =0 order by lft')
             ->queryAll();
 
         $count = 0;
@@ -55,6 +55,8 @@ class CourseController extends Controller
         }
         $arr_new = $this->tree($arr_new, $p_id = '0');
         $this->layout = '/index.php';
+
+
         return $this->render('index', [
             'model' => $arr_new, 'content' => array(array('content' => $content[0]['content'],'name' => $content[0]['name'])),
             'current_id'=>-1,
@@ -80,10 +82,10 @@ class CourseController extends Controller
     public function actionView($id)
     {
 
-        $posts = Yii::$app->db->createCommand('select id,lvl,name,case when lvl = 0 then 0 else root end as root,name from tbl_product where root = 1  order by lft')
+        $posts = Yii::$app->db->createCommand('select id,lvl,name,case when lvl = 0 then 0 else root end as root,name from tbl_product where root = (select root from tbl_product where id = '.$id.' ) and status = 0  order by lft')
             ->queryAll();
 
-        $content = Yii::$app->db->createCommand('select name,content from tbl_product where id = '.$id.'  order by lft')
+        $content = Yii::$app->db->createCommand('select name,content from tbl_product where id = '.$id.'  and status = 0   order by lft')
             ->queryAll();
 
 //        print_r($content);

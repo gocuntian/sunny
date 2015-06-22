@@ -13,7 +13,7 @@
 
                     <span class="image featured"><img src="images/pic08.jpg" alt="" /></span>
 
-                    <p>现在就联系我们，在邮件里说明来意，我们期待你的加入。</p>
+                    <p>现在就<a href="<?php echo 'index.php?r=site/contact'?>" style="color: #0097cf">联系我们</a>，在邮件里说明来意，我们期待你的加入。</p>
 
                     <h3>一份汉水一份收获</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac quam risus, at tempus

@@ -10,7 +10,7 @@ $this->title = 'My Yii Application';
 
         <p class="lead">You have successfully logged.</p>
 
-        <p><a class="btn btn-lg btn-success" href="">HELLO</a></p>
+        <p><a class="btn btn-lg btn-success" href="?r=site/admin">admin</a></p>
     </div>
 
     <div class="body-content">

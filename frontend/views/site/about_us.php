@@ -14,7 +14,7 @@
                             <p>我们是喜欢阳光、自由、分享的编程爱好者，我们完全免费为大家带来优质的实战教程</p>
                             <footer>
                                 <div>&nbsp;&nbsp;&nbsp;&nbsp;如果你也充满激情&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="#" class="button icon fa-info-circle">和我们一起发布教程</a>
+                                <a href="?r=site/contact" class="button icon fa-info-circle">和我们一起发布教程</a>
                                 </div>
                             </footer>
                         </section>
@@ -24,13 +24,18 @@
                                 <h2>近期更新</h2>
                             </header>
                             <ul class="style2">
-                                <li><a href="#">写一个你自己的操作系统</a></li>
-                                <li><a href="#">C语言的深处</a></li>
-                                <li><a href="#">深入理解linux内核</a></li>
+                                <?php
+                                foreach($recent as $val ){
+                                    ?>
+                                    <li><a href="<?php echo 'index.php?r=course/view%2F&id='.$val['id']?>"><?php print_r($val['name']); ?></a></li>
+                                <?php
+                                }
+                                ?>
                             </ul>
-                            <!--<footer>
-                                <a href="#" class="button icon fa-arrow-circle-o-right">Do Something</a>
-                            </footer>-->
+
+
+
+
                         </section>
 
                     </div>

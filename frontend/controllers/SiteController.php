@@ -68,10 +68,20 @@ class SiteController extends Controller
         ];
     }
 
+    private function getReccentCourse()
+    {
+        $recent = Yii::$app->db->createCommand('select id,name,key_word,content,updated_at from tbl_product where status = 0 and lvl =2  order by updated_at desc limit 3 ')
+            ->queryAll();
+        return $recent;
+    }
+
     public function actionIndex()
     {
+        $recent = $this->getReccentCourse();
         $this->layout = '/new.php';
-        return $this->render('new');
+        return $this->render('new' , [
+                'recent' => $recent
+            ]);
     }
 
     public function actionLearn()
@@ -89,7 +99,13 @@ class SiteController extends Controller
     public function actionAbout()
     {
         $this->layout = '/about.php';
-        return $this->render('about_us');
+
+
+        $recent = $this->getReccentCourse();
+
+        return $this->render('about_us', [
+            'recent' => $recent
+        ]);
     }
 
     public function actionContact()

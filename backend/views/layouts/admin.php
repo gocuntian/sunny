@@ -9,25 +9,25 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>sunny project </title>
+    <title>SB Admin 2 - Bootstrap Admin Theme</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link href="css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
 
     <!-- Timeline CSS -->
-    <link href="dist/css/timeline.css" rel="stylesheet">
+    <link href="css/plugins/timeline.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="bower_components/morrisjs/morris.css" rel="stylesheet">
+    <link href="css/plugins/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,7 +51,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">sunny project</a>
+            <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
         </div>
         <!-- /.navbar-header -->
 
@@ -280,11 +280,49 @@
                         <!-- /input-group -->
                     </li>
                     <li>
-                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i>第一章 abc</a>
+                        <a class="active" href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                     </li>
-
                     <li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i>第二章 abc<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="flot.html">Flot Charts</a>
+                            </li>
+                            <li>
+                                <a href="morris.html">Morris.js Charts</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
+                    </li>
+                    <li>
+                        <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="panels-wells.html">Panels and Wells</a>
+                            </li>
+                            <li>
+                                <a href="buttons.html">Buttons</a>
+                            </li>
+                            <li>
+                                <a href="notifications.html">Notifications</a>
+                            </li>
+                            <li>
+                                <a href="typography.html">Typography</a>
+                            </li>
+                            <li>
+                                <a href="grid.html">Grid</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="#">Second Level Item</a>
@@ -314,66 +352,17 @@
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i>第三章 abc<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">Second Level Item</a>
+                                <a href="blank.html">Blank Page</a>
                             </li>
                             <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Third Level <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-third-level -->
+                                <a href="login.html">Login Page</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
-                    <li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i>第四章 abc<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Third Level <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-third-level -->
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-
                 </ul>
             </div>
             <!-- /.sidebar-collapse -->
@@ -384,359 +373,103 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">第一章  ABC  ...  ... </h1>
+                <h1 class="page-header">Dashboard</h1>
             </div>
             <!-- /.col-lg-12 -->
         </div>
-
-        <div class="row">
-            <div class="col-lg-4" style ="width: 100%">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        Headings
-                    </div>
-                    <div class="panel-body">
-                        <h1>Heading 1
-                            <small>Sub-heading</small>
-                        </h1>
-                        <h2>Heading 2
-                            <small>Sub-heading</small>
-                        </h2>
-                        <h3>Heading 3
-                            <small>Sub-heading</small>
-                        </h3>
-                        <h4>Heading 4
-                            <small>Sub-heading</small>
-                        </h4>
-                        <h5>Heading 5
-                            <small>Sub-heading</small>
-                        </h5>
-                        <h6>Heading 6
-                            <small>Sub-heading</small>
-                        </h6>
-                    </div>
-                    <!-- /.panel-body -->
-                </div>
-                <!-- /.panel -->
-            </div>
-            <!-- /.col-lg-4 -->
-            <div class="col-lg-4" style="display: none;">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        Paragraphs
-                    </div>
-                    <div class="panel-body">
-                        <p class="lead">This is an example of lead body copy.</p>
-                        <p>This is an example of standard paragraph text. This is an example of <a href="#">link anchor text</a> within body copy.</p>
-                        <p>
-                            <small>This is an example of small, fine print text.</small>
-                        </p>
-                        <p>
-                            <strong>This is an example of strong, bold text.</strong>
-                        </p>
-                        <p>
-                            <em>This is an example of emphasized, italic text.</em>
-                        </p>
-                        <br>
-                        <h4>Alignment Helpers</h4>
-                        <p class="text-left">Left aligned text.</p>
-                        <p class="text-center">Center aligned text.</p>
-                        <p class="text-right">Right aligned text.</p>
-                    </div>
-                    <!-- /.panel-body -->
-                </div>
-                <!-- /.panel -->
-            </div>
-            <!-- /.col-lg-4 -->
-            <div class="col-lg-4" style="display: none;">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        Emphasis Classes
-                    </div>
-                    <div class="panel-body">
-                        <p class="text-muted">This is an example of muted text.</p>
-                        <p class="text-primary">This is an example of primary text.</p>
-                        <p class="text-success">This is an example of success text.</p>
-                        <p class="text-info">This is an example of info text.</p>
-                        <p class="text-warning">This is an example of warning text.</p>
-                        <p class="text-danger">This is an example of danger text.</p>
-                    </div>
-                    <!-- /.panel-body -->
-                </div>
-                <!-- /.panel -->
-            </div>
-            <!-- /.col-lg-4 -->
-        </div>
-
-        <div class="chat-panel panel panel-default">
-            <div class="panel-heading">
-                <i class="fa fa-comments fa-fw"></i>
-                評論
-                <div class="btn-group pull-right">
-                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-chevron-down"></i>
-                    </button>
-                    <ul class="dropdown-menu slidedown">
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-refresh fa-fw"></i> Refresh
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-check-circle fa-fw"></i> Available
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-times fa-fw"></i> Busy
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-clock-o fa-fw"></i> Away
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-sign-out fa-fw"></i> Sign Out
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- /.panel-heading -->
-            <div class="panel-body">
-                <ul class="chat">
-                    <li class="left clearfix">
-                                    <span class="chat-img pull-left">
-                                        <img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle" />
-                                    </span>
-                        <div class="chat-body clearfix">
-                            <div class="header">
-                                <strong class="primary-font">Jack Sparrow</strong>
-                                <small class="pull-right text-muted">
-                                    <i class="fa fa-clock-o fa-fw"></i> 12 mins ago
-                                </small>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
-                            </p>
-                        </div>
-                    </li>
-                    <li class="right clearfix">
-                                    <span class="chat-img pull-right">
-                                        <img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar" class="img-circle" />
-                                    </span>
-                        <div class="chat-body clearfix">
-                            <div class="header">
-                                <small class=" text-muted">
-                                    <i class="fa fa-clock-o fa-fw"></i> 13 mins ago</small>
-                                <strong class="pull-right primary-font">Bhaumik Patel</strong>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
-                            </p>
-                        </div>
-                    </li>
-                    <li class="left clearfix">
-                                    <span class="chat-img pull-left">
-                                        <img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle" />
-                                    </span>
-                        <div class="chat-body clearfix">
-                            <div class="header">
-                                <strong class="primary-font">Jack Sparrow</strong>
-                                <small class="pull-right text-muted">
-                                    <i class="fa fa-clock-o fa-fw"></i> 14 mins ago</small>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
-                            </p>
-                        </div>
-                    </li>
-                    <li class="right clearfix">
-                                    <span class="chat-img pull-right">
-                                        <img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar" class="img-circle" />
-                                    </span>
-                        <div class="chat-body clearfix">
-                            <div class="header">
-                                <small class=" text-muted">
-                                    <i class="fa fa-clock-o fa-fw"></i> 15 mins ago</small>
-                                <strong class="pull-right primary-font">Bhaumik Patel</strong>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.panel-body -->
-            <div class="panel-footer">
-                <div class="input-group">
-                    <input id="btn-input" type="text" class="form-control input-sm" placeholder="回复免责声明，会员发表的内容，回复内容只代表其个人看法，不代表本站看法和态度。" />
-                                <span class="input-group-btn">
-                                    <button class="btn btn-warning btn-sm" id="btn-chat">
-                                        Send
-                                    </button>
-                                </span>
-                </div>
-            </div>
-            <!-- /.panel-footer -->
-        </div>
-
         <!-- /.row -->
         <div class="row">
-            <div class="col-lg-4">
-                <div class="panel panel-default">
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-primary">
                     <div class="panel-heading">
-                        Abbreviations
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-comments fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">26</div>
+                                <div>New Comments!</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="panel-body">
-                        <p>The abbreviation of the word attribute is
-                            <abbr title="attribute">attr</abbr>.</p>
-                        <p>
-                            <abbr title="HyperText Markup Language" class="initialism">HTML</abbr>is an abbreviation for a programming language.</p>
-                        <br>
-                        <h4>Addresses</h4>
-                        <address>
-                            <strong>Twitter, Inc.</strong>
-                            <br>795 Folsom Ave, Suite 600
-                            <br>San Francisco, CA 94107
-                            <br>
-                            <abbr title="Phone">P:</abbr>(123) 456-7890
-                        </address>
-                        <address>
-                            <strong>Full Name</strong>
-                            <br>
-                            <a href="mailto:#">first.last@example.com</a>
-                        </address>
-                    </div>
-                    <!-- /.panel-body -->
+                    <a href="#">
+                        <div class="panel-footer">
+                            <span class="pull-left">View Details</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
                 </div>
-                <!-- /.panel -->
             </div>
-            <!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-                <div class="panel panel-default">
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-green">
                     <div class="panel-heading">
-                        Blockquotes
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-tasks fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">12</div>
+                                <div>New Tasks!</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="panel-body">
-                        <h4>Default Blockquote</h4>
-                        <blockquote>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        </blockquote>
-                        <h4>Blockquote with Citation</h4>
-                        <blockquote>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                            <small>Someone famous in
-                                <cite title="Source Title">Source Title</cite>
-                            </small>
-                        </blockquote>
-                        <h4>Right Aligned Blockquote</h4>
-                        <blockquote class="pull-right">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        </blockquote>
-                    </div>
-                    <!-- /.panel-body -->
+                    <a href="#">
+                        <div class="panel-footer">
+                            <span class="pull-left">View Details</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
                 </div>
-                <!-- /.panel -->
             </div>
-            <!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-                <div class="panel panel-default">
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-yellow">
                     <div class="panel-heading">
-                        Lists
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-shopping-cart fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">124</div>
+                                <div>New Orders!</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="panel-body">
-                        <h4>Unordered List</h4>
-                        <ul>
-                            <li>List Item</li>
-                            <li>List Item</li>
-                            <li>
-                                <ul>
-                                    <li>List Item</li>
-                                    <li>List Item</li>
-                                    <li>List Item</li>
-                                </ul>
-                            </li>
-                            <li>List Item</li>
-                        </ul>
-                        <h4>Ordered List</h4>
-                        <ol>
-                            <li>List Item</li>
-                            <li>List Item</li>
-                            <li>List Item</li>
-                        </ol>
-                        <h4>Unstyled List</h4>
-                        <ul class="list-unstyled">
-                            <li>List Item</li>
-                            <li>List Item</li>
-                            <li>List Item</li>
-                        </ul>
-                        <h4>Inline List</h4>
-                        <ul class="list-inline">
-                            <li>List Item</li>
-                            <li>List Item</li>
-                            <li>List Item</li>
-                        </ul>
-                    </div>
-                    <!-- /.panel-body -->
+                    <a href="#">
+                        <div class="panel-footer">
+                            <span class="pull-left">View Details</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
                 </div>
-                <!-- /.panel -->
             </div>
-            <!-- /.col-lg-4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-red">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-support fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">13</div>
+                                <div>Support Tickets!</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="panel-footer">
+                            <span class="pull-left">View Details</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
         <!-- /.row -->
         <div class="row">
-            <div class="col-lg-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        Description Lists
-                    </div>
-                    <div class="panel-body">
-                        <dl>
-                            <dt>Standard Description List</dt>
-                            <dd>Description Text</dd>
-                            <dt>Description List Title</dt>
-                            <dd>Description List Text</dd>
-                        </dl>
-                        <dl class="dl-horizontal">
-                            <dt>Horizontal Description List</dt>
-                            <dd>Description Text</dd>
-                            <dt>Description List Title</dt>
-                            <dd>Description List Text</dd>
-                        </dl>
-                    </div>
-                    <!-- /.panel-body -->
-                </div>
-                <!-- /.panel -->
-            </div>
-            <!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        Code
-                    </div>
-                    <div class="panel-body">
-                        <p>This is an example of an inline code element within body copy. Wrap inline code within a
-                            <code>&lt;code&gt;...&lt;/code&gt;</code>tag.</p>
-                        <pre>This is an example of preformatted text.</pre>
-                    </div>
-                    <!-- /.panel-body -->
-                </div>
-                <!-- /.panel -->
-            </div>
-            <!-- /.col-lg-4 -->
-        </div>
-        <!-- /.row -->
-
-
-
-
-        <div class="row" style="display: none">
             <div class="col-lg-8">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1183,22 +916,22 @@
 </div>
 <!-- /#wrapper -->
 
-<!-- jQuery -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!-- jQuery Version 1.11.0 -->
+<script src="js/jquery-1.11.0.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
 <!-- Metis Menu Plugin JavaScript -->
-<script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
+<script src="js/plugins/metisMenu/metisMenu.min.js"></script>
 
 <!-- Morris Charts JavaScript -->
-<script src="bower_components/raphael/raphael-min.js"></script>
-<script src="bower_components/morrisjs/morris.min.js"></script>
-<script src="js/morris-data.js"></script>
+<script src="js/plugins/morris/raphael.min.js"></script>
+<script src="js/plugins/morris/morris.min.js"></script>
+<script src="js/plugins/morris/morris-data.js"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="dist/js/sb-admin-2.js"></script>
+<script src="js/sb-admin-2.js"></script>
 
 </body>
 

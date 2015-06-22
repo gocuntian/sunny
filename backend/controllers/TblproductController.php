@@ -26,6 +26,26 @@ class TblproductController extends Controller
         ];
     }
 
+    public function actionPublish($id){
+//        print_r(date('Y-m-d H:i:s'));
+
+        Yii::$app->db->createCommand('')->update('tbl_product',['updated_at' => time()], 'id = '.$id .' and  updated_at is null')->execute();
+
+        Yii::$app->db->createCommand('')->update('tbl_product',['status' => 0], 'id = '.$id.'')->execute();
+
+        return $this->render('view', [
+            'model' => $this->findModel($id),
+        ]);
+    }
+
+    public function actionClose($id){
+        Yii::$app->db->createCommand('')->update('tbl_product',['status' => 1], 'id = '.$id.'')->execute();
+
+        return $this->render('view', [
+            'model' => $this->findModel($id),
+        ]);
+    }
+
     /**
      * Lists all TblProduct models.
      * @return mixed

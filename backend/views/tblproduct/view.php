@@ -23,6 +23,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) */?>
+
+        <?= Html::a(Yii::t('app', 'publish'), ['publish', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a(Yii::t('app', 'close'), ['close', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
     </p>
 
     <?= DetailView::widget([
@@ -49,7 +52,7 @@ $this->params['breadcrumbs'][] = $this->title;
 //            'removable',
 //            'removable_all',
             'key_word',
-//            'status',
+            ['label'=>'发布状态','value'=>isset($model->status)&&$model->status==0?'发布':'关闭','class'=>'special-font-color'],
 //            'thumbsup',
 //            'thumbsdown',
 //            'content:ntext',

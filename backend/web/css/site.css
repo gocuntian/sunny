@@ -18,6 +18,11 @@ body {
     text-align:center
 }
 
+
+.special-font-color{
+    color: red;
+}
+
 .footer {
     height: 60px;
     background-color: #f5f5f5;

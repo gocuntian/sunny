@@ -9,6 +9,7 @@ namespace frontend\util;
 
 class PrintTitle
 {
+
     public function sayHello()
     {
         echo 'hello from util';
